@@ -1,0 +1,11 @@
+@import '@/styles/variables.scss';
+@import '@/styles/_mixins.scss';
+
+.footer {
+  background: $clr-primary-dark;
+  transition: background $transition-duration;
+
+  &.dark {
+    background: $clr-primary-light;
+  }
+}

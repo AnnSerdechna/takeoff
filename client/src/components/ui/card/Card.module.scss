@@ -1,0 +1,79 @@
+@import '@/styles/variables.scss';
+@import '@/styles/_mixins.scss';
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $gap-sm;
+  padding: 16px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid $clr-primary-dark;
+  transition: border $transition-duration;
+
+  svg.heartIcon {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    cursor: pointer;
+
+    path {
+      transition: stroke $transition-duration, fill $transition-duration;
+      stroke: $clr-primary-dark;
+    }
+
+    &.heartIconLiked {
+      path {
+        fill: $clr-primary-dark;
+      }
+    }
+  }
+
+  .price {
+    font-weight: 400;
+    font-size: 20px;
+    font-family: $ff-primary;
+    color: $clr-primary-dark;
+  }
+
+  &.dark {
+    border: 1px solid $clr-primary-light;
+
+    svg.heartIcon {
+      path {
+        stroke: $clr-primary-light;
+      }
+      &.heartIconLiked {
+        path {
+          fill: $clr-primary-light;
+        }
+      }
+    }
+    .price {
+      color: $clr-primary-light;
+    }
+  }
+
+  @include mobile {
+    gap: $gap-xs;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: $box-shadow-light-mobile;
+
+    svg.heartIcon {
+      top: 5px;
+      right: 5px;
+    }
+
+    .price {
+      font-size: 14px;
+    }
+
+    &.dark {
+      box-shadow: $box-shadow-dark-mobile;
+    }
+  }
+}

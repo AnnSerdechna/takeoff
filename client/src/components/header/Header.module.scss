@@ -1,0 +1,110 @@
+@import '@/styles/variables.scss';
+@import '@/styles/_mixins.scss';
+
+.header {
+  height: 110px;
+  background: $clr-primary-dark;
+  transition: background $transition-duration;
+
+  .switchWrap {
+    flex: 0.3;
+    height: 100%;
+    margin-top: 30px;
+  }
+
+  .menuWrap {
+    flex: 1;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .contentEnd {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex: 0.3;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    gap: $gap-xs;
+    cursor: pointer;
+
+    .inputWrap {
+      width: 0;
+      opacity: 0;
+      transition: width $transition-duration, opacity $transition-duration;
+
+      &.visible {
+        width: 200px;
+        opacity: 1;
+      }
+    }
+
+    .input {
+      width: 100%;
+      height: 30px;
+      padding: 0 8px;
+      color: $clr-primary-light;
+      font-size: 16px;
+      font-family: $ff-secondary;
+      letter-spacing: 0.06rem;
+      outline: 1px solid transparent;
+      border-radius: 4px;
+      border: none;
+      background: rgba($clr-primary-light, 0.1);
+
+      &:focus,
+      &:active {
+        outline: 1px solid $clr-accent;
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    .iconsGroup {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+
+  svg.icon {
+    path {
+      fill: $clr-primary-light;
+      stroke: $clr-primary-light;
+    }
+  }
+
+  &.dark {
+    background: $clr-primary-light;
+
+    svg.icon {
+      path {
+        fill: $clr-primary-dark;
+        stroke: $clr-primary-dark;
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      gap: $gap-xs;
+      cursor: pointer;
+
+      .input {
+        color: $clr-primary-dark;
+        background: rgba($clr-primary-dark, 1);
+      }
+    }
+  }
+}

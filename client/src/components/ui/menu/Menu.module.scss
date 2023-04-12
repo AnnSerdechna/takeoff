@@ -1,0 +1,62 @@
+@import '@/styles/variables.scss';
+@import '@/styles/_mixins.scss';
+
+.menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  .menuLink {
+    position: relative;
+    display: inline-flex;
+    padding: 10px 0;
+    color: $clr-primary-light;
+    font-family: $ff-secondary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color $transition-duration;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: $clr-primary-light;
+      transition: width $transition-duration;
+    }
+
+    &.active {
+      color: $clr-accent;
+
+      &::before {
+        width: 100%;
+        background: $clr-accent;
+      }
+    }
+  }
+
+  &.dark {
+    .menuLink {
+      color: $clr-primary-dark;
+
+      &::before {
+        background: $clr-primary-dark;
+      }
+
+      &.active {
+        color: $clr-accent;
+
+        &::before {
+          width: 100%;
+          background: $clr-accent;
+        }
+      }
+    }
+  }
+}
