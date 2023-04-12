@@ -15,10 +15,7 @@ export const Menu: FC<{ items: Array<{ id: string, label: string, pathname: stri
   return (
     <ul className={cn(styles.menu, isDarkMode && styles.dark)}>
       {items.map(({ id, label, pathname }) => (
-        <li
-          key={id}
-          className={styles.menuItem}
-        >
+        <li key={id}>
           <Link
             href={pathname}
             className={cn(styles.menuLink, router.pathname === pathname && styles.active)}

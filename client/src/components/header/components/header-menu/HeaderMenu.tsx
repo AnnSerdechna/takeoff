@@ -1,6 +1,6 @@
 import {FC} from 'react'
 
-import {Menu} from '@/components/ui/menu/Menu'
+import {Menu} from '@/components/ui'
 import styles from './HeaderMenu.module.scss'
 
 const items: Array<{ id: string, label: string, pathname: string }> = [

@@ -5,6 +5,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  margin: 0;
 
   .menuLink {
     position: relative;
@@ -31,12 +32,19 @@
       transition: width $transition-duration;
     }
 
-    &.active {
+    &.active, &:hover {
       color: $clr-accent;
 
       &::before {
         width: 100%;
         background: $clr-accent;
+      }
+    }
+
+    &:hover {
+      color: $clr-primary-light;
+      &::before {
+        background: $clr-primary-light;
       }
     }
   }
