@@ -1,0 +1,73 @@
+@import '@/styles/variables.scss';
+@import '@/styles/_mixins.scss';
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: $gap-xs;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 60px;
+  border: 1px solid transparent;
+
+  &.visible .input {
+    width: 200px;
+  }
+
+  &.visible {
+    border: 1px solid $clr-accent;
+
+    svg.searchIcon {
+      path {
+        fill: $clr-accent;
+        stroke: $clr-accent;
+      }
+    }
+  }
+
+  svg.searchIcon {
+    path {
+      fill: $clr-primary-light;
+      stroke: $clr-primary-light;
+      transition: fill $transition-duration, stroke $transition-duration;
+
+      &:hover {
+        fill: $clr-accent;
+        stroke: $clr-accent;
+      }
+    }
+  }
+
+  .input {
+    width: 0;
+    height: 30px;
+    padding: 0 8px;
+    color: $clr-primary-light;
+    font-size: 16px;
+    font-family: $ff-secondary;
+    letter-spacing: 0.06rem;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    background: transparent;
+    transition: width $transition-duration;
+  }
+
+  &.dark {
+    svg.searchIcon {
+      path {
+        fill: $clr-primary-dark;
+        stroke: $clr-primary-dark;
+      }
+    }
+
+    &.visible {
+      svg.searchIcon {
+        path {
+          fill: $clr-accent;
+          stroke: $clr-accent;
+        }
+      }
+    }
+  }
+}

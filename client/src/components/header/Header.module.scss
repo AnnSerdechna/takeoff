@@ -1,0 +1,77 @@
+@import '@/styles/variables.scss';
+@import '@/styles/_mixins.scss';
+
+.header {
+  height: 110px;
+  background: $clr-primary-dark;
+  transition: background $transition-duration;
+
+  .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .switchWrap {
+      flex: 0.3;
+      height: 100%;
+      margin-top: 30px;
+    }
+
+    .menuWrap {
+      flex: 1;
+    }
+
+    .contentEnd {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      flex: 0.3;
+
+      .iconsGroup {
+        display: flex;
+        gap: 48px;
+
+        .iconsEnd {
+          display: flex;
+          gap: 20px;
+        }
+      }
+    }
+  }
+
+  .logo {
+    position: absolute;
+    bottom: -35%;
+    left: 0;
+  }
+
+  .headerMobile {
+    position: relative;
+    height: 100%;
+    .logo {
+      position: absolute;
+      bottom: -35%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .contentMobile {
+      padding: 8px 0 0 0;
+      .icons {
+        display: flex;
+        justify-content: space-between;
+
+        .iconsStart, .iconsEnd {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+    }
+  }
+
+  &.dark {
+    background: $clr-primary-light;
+  }
+}

@@ -1,0 +1,14 @@
+@import '@/styles/variables.scss';
+@import '@/styles/_mixins.scss';
+
+.container {
+  height: 100%;
+  width: $width-full;
+  max-width: $width-container-max;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include mobile {
+    padding: 0 20px;
+  }
+}

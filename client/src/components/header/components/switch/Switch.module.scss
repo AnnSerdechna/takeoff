@@ -1,0 +1,69 @@
+@import '@/styles/variables.scss';
+
+.switchTablet {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  cursor: pointer;
+
+  svg.sunIcon {
+    width: 18px;
+    height: 18px;
+
+    path {
+      fill: $clr-primary-dark;
+      stroke: transparent;
+    }
+  }
+  svg.moonIcon {
+    width: 16px;
+    height: 16px;
+
+    path {
+      stroke: $clr-primary-light;
+      fill: transparent;
+    }
+  }
+}
+
+.switch {
+  width: 51px;
+  padding: 4px;
+  border: 2px solid $clr-primary-light;
+  border-radius: 20px;
+  cursor: pointer;
+
+  .iconWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: $clr-primary-light;
+    border-radius: 50%;
+    transform: translateX(0);
+    transition: transform $transition-duration;
+
+    svg.sunIcon {
+      path {
+        fill: $clr-primary-light;
+        stroke: transparent;
+      }
+    }
+    svg.moonIcon {
+      path {
+        stroke: transparent;
+        fill: $clr-primary-dark;
+      }
+    }
+  }
+
+  &.dark {
+    border: 2px solid $clr-primary-dark;
+
+    .iconWrap {
+      background: $clr-primary-dark;
+      transform: translateX(21px);
+    }
+  }
+}

@@ -1,0 +1,38 @@
+//colors
+$clr-black: #212121;
+$clr-white: #fff;
+$clr-orange: #E54404;
+
+$clr-primary-dark: $clr-black;
+$clr-primary-light: $clr-white;
+$clr-accent: $clr-orange;
+
+//gaps
+$gap-xs: 10px;
+$gap-sm: 20px;
+$gap-md: 30px;
+$gap-lg: 40px;
+$gap-xl: 60px;
+$gap-section-xs: 50px;
+$gap-section-md: 80px;
+$gap-section-lg: 100px;
+$gap-section-xl: 200px;
+
+$width-container-max: 1300px;
+$width-full: 100%;
+
+//font-family
+$ff-primary: 'Kharkiv Tone';
+$ff-secondary: 'Raleway', sans-serif;
+
+//transition
+$transition-duration: 500ms;
+
+//box-shadow
+$box-shadow-light-mobile: $clr-primary-dark 5px 5px;
+$box-shadow-dark-mobile: $clr-primary-light 5px 5px;
+
+//screens
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 1024px;

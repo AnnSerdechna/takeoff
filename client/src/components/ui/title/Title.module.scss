@@ -1,0 +1,30 @@
+@import '@/styles/variables.scss';
+@import '@/styles/_mixins.scss';
+
+.title {
+  color: $clr-primary-dark;
+  font-size: 16px;
+  font-family: $ff-primary;
+  transition: color $transition-duration;
+
+  &.md {
+    font-size: 20px;
+  }
+
+  &.dark {
+    color: $clr-primary-light;
+  }
+
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include mobile {
+    font-size: 11px;
+
+    &.md {
+      font-size:11px;
+    }
+  }
+}

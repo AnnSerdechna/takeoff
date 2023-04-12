@@ -1,0 +1,40 @@
+@import '@/styles/variables.scss';
+@import '@/styles/_mixins.scss';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  width: 100%;
+  color: $clr-black;
+  font-family: $ff-primary;
+  font-weight: 400;
+  font-size: 36px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid $clr-primary-dark;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: color $transition-duration, border $transition-duration;
+
+  &.dark {
+    color: $clr-primary-light;
+    border: 1px solid $clr-primary-light;
+  }
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include mobile {
+    padding: 12px 0;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: $box-shadow-light-mobile;
+
+    &.dark {
+      box-shadow: $box-shadow-dark-mobile;
+    }
+  }
+}
